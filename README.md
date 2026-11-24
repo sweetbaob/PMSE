@@ -50,6 +50,3 @@ python run.py collect --input outputs/etth2_h48 --output outputs/tables
 训练段用于拟合标准化参数。在线评测以步长 1 滑动，仅统计完整预测窗口，并在全部 H 步标签到达后使用该样本更新。PMSE 主结果使用 PFTC。代码许可及第三方声明见 [LICENSE](LICENSE) 和 [NOTICE](NOTICE)，上游代码版本和配置来源见 [来源清单](docs/source_manifest.json)。
 
 <details>
-<summary>完整评测协议与实现说明</summary>
-
-默认预测步长为 24、48、96，PEMS03 使用 12、24、48。FSNet 只支持 TCN。ETTh2 和 ETTm1 使用固定有效前缀，训练、验证和测试的边界分别为 2880/3600/14400 和 11520/14400/57600。PEMS03 从三个 NPZ 文件重建原始序列后重新划分。
