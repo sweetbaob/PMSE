@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-21",
+  "server": "42",
+  "project": "/PMSE_Benchmark",
+  "device": "CPU",
+  "gpu_full_training_verified": false,
+  "gpu_not_used_reason": "Existing GPU job was active; no job was interrupted.",
+  "datasets_checked": 8,
+  "real_data_configurations": 96,
+  "real_data_engines": [
+    "PMSE",
+    "Proceed"
+  ],
+  "real_data_check": "one training window forward/backward for each engine and configuration",
+  "synthetic_method_backbone_pairs": 33,
+  "unit_tests_passed": 7,
+  "shell_entrypoints_checked": 22,
+  "default_main_plan_seed_runs": 576,
+  "all_methods_plan_seed_runs": 2376,
+  "cli_check": {
+    "dataset": "ExchangeRate",
+    "backbone": "DLinear",
+    "method": "Static",
+    "H": 24,
+    "epochs": 1,
+    "seeds": [
+      2021,
+      2022,
+      2023
+    ],
+    "identical_repeat_skipped": true,
+    "complete_group_collected": true,
+    "paper_result": false
+  },
+  "full_main_experiments_started": false
+}

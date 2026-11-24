@@ -1,0 +1,26 @@
+PMSE
+Copyright 2026 PMSE contributors.
+
+The PatchTST files in pmse/backbones are derived from the supervised implementation of
+PatchTST (yuqinie98/PatchTST), distributed under the Apache License, Version 2.0.
+Upstream URLs, file hashes and local import changes are recorded in
+third_party/provenance.json. Its license is preserved in third_party/PatchTST-LICENSE.
+Original notices in the vendored files are retained.
+
+TCN, iTransformer and DLinear and their necessary dependency definitions were
+copied from PROCEED / OnlineTSF (SJTU-DMTai/OnlineTSF), whose pyproject.toml
+declares Apache-2.0. Original and packaged file hashes, extracted definitions
+and changes are recorded in third_party/OnlineTSF-provenance.json.
+The TS2Vec and iTransformer MIT notices and LTSF-Linear Apache-2.0 notice are
+retained in third_party/TS2Vec-LICENSE, iTransformer-LICENSE and
+LTSF-Linear-LICENSE respectively.
+
+The baseline implementation under vendor/onlinetsf, including the PROCEED
+adapter, experiment framework, FSNet/OneNet models and ER/DERpp replay buffer,
+is derived from SJTU-DMTai/OnlineTSF and the audited research server checkout.
+Original file headers are retained. Source and integration changes are recorded
+in docs/source_manifest.json and README.md. Official scripts are
+preserved as configuration evidence under docs/recipes_source, not as the runner.
+This project is an independent PMSE benchmark, not an official upstream release.
+
+Dataset files have separate terms and are intentionally excluded from Git.

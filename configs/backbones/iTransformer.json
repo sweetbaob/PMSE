@@ -1,0 +1,32 @@
+{
+  "name": "iTransformer",
+  "model": {
+    "d_model": 512,
+    "d_ff": 512,
+    "e_layers": 3,
+    "n_heads": 8,
+    "dropout": 0.05,
+    "activation": "gelu",
+    "factor": 3,
+    "embed": "timeF",
+    "freq": "h",
+    "class_strategy": "projection",
+    "output_attention": false
+  },
+  "dataset_model_overrides": {
+    "ETTh2": {
+      "d_model": 128,
+      "d_ff": 128,
+      "e_layers": 2
+    },
+    "ETTm1": {
+      "d_model": 128,
+      "d_ff": 128,
+      "e_layers": 2
+    },
+    "Traffic": {
+      "e_layers": 4
+    }
+  },
+  "notes": "Native architecture dimensions inherited from the audited implementation; input length is resolved explicitly by dataset lengths. PMSE and baselines use identical observed calendar covariates."
+}

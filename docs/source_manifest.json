@@ -1,0 +1,476 @@
+{
+  "assembled": "2026-11-21",
+  "sources": [
+    {
+      "path": "vendor/onlinetsf/settings.py",
+      "origin": "226:/home/zhanglei/Proceed/settings.py",
+      "source_sha256": "2fb80fd73cf5b46b757174d1483985fff072f95d8920219ba36266ce3358e5a0",
+      "packaged_sha256": "9c23fd43b0e24f67c625d9c68e3c13e18c2009880aa1927a85f1701459fa8b89",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "vendor/onlinetsf/adapter/proceed.py",
+      "origin": "226:/home/zhanglei/Proceed/adapter/proceed.py",
+      "source_sha256": "55a67252274178b8e9cfe6eb74920390d46c1a128cdcb993ed2d7609ffdf1872",
+      "packaged_sha256": "55a67252274178b8e9cfe6eb74920390d46c1a128cdcb993ed2d7609ffdf1872",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/adapter/module/base.py",
+      "origin": "226:/home/zhanglei/Proceed/adapter/module/base.py",
+      "source_sha256": "3bd5f212afdce9214e86c24d2b801314d5883c73ebb25b7cb2f70ea2ad56da82",
+      "packaged_sha256": "3bd5f212afdce9214e86c24d2b801314d5883c73ebb25b7cb2f70ea2ad56da82",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/adapter/module/down_up.py",
+      "origin": "226:/home/zhanglei/Proceed/adapter/module/down_up.py",
+      "source_sha256": "d2f936b6184b294940cfaeded61812ffab12dd60781af4514f3d1027a20ee762",
+      "packaged_sha256": "d2f936b6184b294940cfaeded61812ffab12dd60781af4514f3d1027a20ee762",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/adapter/module/generator.py",
+      "origin": "226:/home/zhanglei/Proceed/adapter/module/generator.py",
+      "source_sha256": "e8975560cb86bcdf8fe1b12268d0c7439c438da25292d46b64121bf41aec93ac",
+      "packaged_sha256": "e8975560cb86bcdf8fe1b12268d0c7439c438da25292d46b64121bf41aec93ac",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/adapter/module/ssf.py",
+      "origin": "226:/home/zhanglei/Proceed/adapter/module/ssf.py",
+      "source_sha256": "49417c524527fce5e209097ca47e6658364655eb0425052b325528cc60588f04",
+      "packaged_sha256": "49417c524527fce5e209097ca47e6658364655eb0425052b325528cc60588f04",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/adapter/module/up.py",
+      "origin": "226:/home/zhanglei/Proceed/adapter/module/up.py",
+      "source_sha256": "5a761997b771b3818160c9591834b09991ecd344a15b5b9227a3a883ce397d91",
+      "packaged_sha256": "5a761997b771b3818160c9591834b09991ecd344a15b5b9227a3a883ce397d91",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/data_provider/data_factory.py",
+      "origin": "226:/home/zhanglei/Proceed/data_provider/data_factory.py",
+      "source_sha256": "c8c97a66fc0253278b47e0abca522c8a093ed5c04adcde2ab7a7aa57c2af0563",
+      "packaged_sha256": "c8c97a66fc0253278b47e0abca522c8a093ed5c04adcde2ab7a7aa57c2af0563",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/data_provider/data_loader.py",
+      "origin": "226:/home/zhanglei/Proceed/data_provider/data_loader.py",
+      "source_sha256": "86265a4cabfb75538f5f4eaa20ca7bc3866eada3ba76bb86e535c5f0c1f73dce",
+      "packaged_sha256": "86265a4cabfb75538f5f4eaa20ca7bc3866eada3ba76bb86e535c5f0c1f73dce",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/exp/exp_basic.py",
+      "origin": "226:/home/zhanglei/Proceed/exp/exp_basic.py",
+      "source_sha256": "e7c3343d41504c32e67a47dfbd249160cf740cf5211fb7e5439af272a6fb78d8",
+      "packaged_sha256": "2beb4cc8584cf1df8c1d966f1ac714b2e788d6cc834cb01e3d8be061b06b9955",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "vendor/onlinetsf/exp/exp_main.py",
+      "origin": "226:/home/zhanglei/Proceed/exp/exp_main.py",
+      "source_sha256": "6c705a99544312afc3acddebc79b93c2dfddff5be66b139019b84de771b33bfe",
+      "packaged_sha256": "6c705a99544312afc3acddebc79b93c2dfddff5be66b139019b84de771b33bfe",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/exp/exp_online.py",
+      "origin": "226:/home/zhanglei/Proceed/exp/exp_online.py",
+      "source_sha256": "21cdf096d07b6f0fdd4562ed162c14a12d358e81a7c404414ff2d229002e8990",
+      "packaged_sha256": "4a2b2c1c45e9d691d275e36bba324beb00adc7e20a70ac3fab69ec3b42698135",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "vendor/onlinetsf/exp/exp_proceed.py",
+      "origin": "226:/home/zhanglei/Proceed/exp/exp_proceed.py",
+      "source_sha256": "218b73aec1f66edf469df032ecf7940240d972dfb8abf779c83a659df1afedd2",
+      "packaged_sha256": "218b73aec1f66edf469df032ecf7940240d972dfb8abf779c83a659df1afedd2",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/exp/exp_solid.py",
+      "origin": "226:/home/zhanglei/Proceed/exp/exp_solid.py",
+      "source_sha256": "ab159a26cde35f9e667aab1ed6cc2699b956e68e20ac86f17ab820bf97374315",
+      "packaged_sha256": "d7e2e0b9636e343d263bcee0425fb084a1d8daf47dba45c86f58d1edbeb0bac7",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "vendor/onlinetsf/exp/jointr_nor_support.py",
+      "origin": "226:/home/zhanglei/Proceed/exp/jointr_nor_support.py",
+      "source_sha256": "f17c7f620478768c36e709c2f2db51447a64bd5cf46a1aca0249739328240421",
+      "packaged_sha256": "f17c7f620478768c36e709c2f2db51447a64bd5cf46a1aca0249739328240421",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/exp/__init__.py",
+      "origin": "226:/home/zhanglei/Proceed/exp/__init__.py",
+      "source_sha256": "54574457ee65e269d279489eb12de541ad86234bbd1f49f20aeb93cd658d04a0",
+      "packaged_sha256": "4c3c311c5282ce482dac442ae2ab68507ec613ef15e8b865ce389d5a77ada05c",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "vendor/onlinetsf/layers/Embed.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/Embed.py",
+      "source_sha256": "6b80d61aea1a9a1ea24ed14cec9d9c0d2c8c97169b433cac5973f570688a6fe8",
+      "packaged_sha256": "6b80d61aea1a9a1ea24ed14cec9d9c0d2c8c97169b433cac5973f570688a6fe8",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/PatchTST_backbone.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/PatchTST_backbone.py",
+      "source_sha256": "5237a068b49511ddc1fa638c0e778006ae4a5f51c8f3e7a912bfcc96329ef87a",
+      "packaged_sha256": "5237a068b49511ddc1fa638c0e778006ae4a5f51c8f3e7a912bfcc96329ef87a",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/PatchTST_layers.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/PatchTST_layers.py",
+      "source_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6",
+      "packaged_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/RevIN.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/RevIN.py",
+      "source_sha256": "9b5a3a84a9642a4fc1241b6ebc3cca4ad3f7bd47f3f0a6843a0ce76828d0b628",
+      "packaged_sha256": "9b5a3a84a9642a4fc1241b6ebc3cca4ad3f7bd47f3f0a6843a0ce76828d0b628",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/SelfAttention_Family.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/SelfAttention_Family.py",
+      "source_sha256": "bca2c15f94e4f4444f62ff27f6fa61e2e237d2171f0aee3e1428ecaa85bb1182",
+      "packaged_sha256": "bca2c15f94e4f4444f62ff27f6fa61e2e237d2171f0aee3e1428ecaa85bb1182",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/Transformer_EncDec.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/Transformer_EncDec.py",
+      "source_sha256": "b543702cf5764d678be8d8a68d878853af022e7b55ce812d941f81b8bc6a68b6",
+      "packaged_sha256": "b543702cf5764d678be8d8a68d878853af022e7b55ce812d941f81b8bc6a68b6",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/ts2vec/dev.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/ts2vec/dev.py",
+      "source_sha256": "25a3e7f82bd3fd3439ac159df1e6791921c5be0a8eef2d8b05a0d8ecaf00fc3b",
+      "packaged_sha256": "25a3e7f82bd3fd3439ac159df1e6791921c5be0a8eef2d8b05a0d8ecaf00fc3b",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/ts2vec/dilated_conv.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/ts2vec/dilated_conv.py",
+      "source_sha256": "9c98e7313e78748670083c400a4ee4d1357a88f1a0457c7f44e780ac4165cdbb",
+      "packaged_sha256": "9c98e7313e78748670083c400a4ee4d1357a88f1a0457c7f44e780ac4165cdbb",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/ts2vec/encoder.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/ts2vec/encoder.py",
+      "source_sha256": "792edbc617177c30d19c090b43b4ad6c07dd1327460e763de0c8069349c31432",
+      "packaged_sha256": "792edbc617177c30d19c090b43b4ad6c07dd1327460e763de0c8069349c31432",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/ts2vec/fsnet.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/ts2vec/fsnet.py",
+      "source_sha256": "e45f159a05c7f5bacc54ad53e60f66d40c46b539fdbe8e29c813039277302eb3",
+      "packaged_sha256": "e45f159a05c7f5bacc54ad53e60f66d40c46b539fdbe8e29c813039277302eb3",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/ts2vec/fsnet_.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/ts2vec/fsnet_.py",
+      "source_sha256": "cac75561a733aee60d35c967cbc5cac69ae36e025ec725cc124b1fbbc5c84501",
+      "packaged_sha256": "668eff28aaa6ed38a12be403baba674514a294f1e86b41a02943436a20b52cd9",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "vendor/onlinetsf/layers/ts2vec/losses.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/ts2vec/losses.py",
+      "source_sha256": "c6f38f66a09b29689ab501062f2851bbd8139eb4bdb40dc73aa4bb0ce3bb2f8c",
+      "packaged_sha256": "c6f38f66a09b29689ab501062f2851bbd8139eb4bdb40dc73aa4bb0ce3bb2f8c",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/ts2vec/ncca.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/ts2vec/ncca.py",
+      "source_sha256": "2db0136fb8cd9766c1333c474e065b01dfed8ac27a1c8abe1f1a067b8c60dfb6",
+      "packaged_sha256": "2db0136fb8cd9766c1333c474e065b01dfed8ac27a1c8abe1f1a067b8c60dfb6",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/ts2vec/ncca_.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/ts2vec/ncca_.py",
+      "source_sha256": "e5703ffee8be2280c6e5573aeb11f7286831a1eeb436ca50a996fd50edcde7e9",
+      "packaged_sha256": "e5703ffee8be2280c6e5573aeb11f7286831a1eeb436ca50a996fd50edcde7e9",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/ts2vec/nomem.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/ts2vec/nomem.py",
+      "source_sha256": "e4db3039393dbd0038f570e04fcb68f62f8ec3f4afebd825764d89551074cb9e",
+      "packaged_sha256": "e4db3039393dbd0038f570e04fcb68f62f8ec3f4afebd825764d89551074cb9e",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/layers/ts2vec/__init__.py",
+      "origin": "226:/home/zhanglei/Proceed/layers/ts2vec/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "packaged_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/models/DLinear.py",
+      "origin": "226:/home/zhanglei/Proceed/models/DLinear.py",
+      "source_sha256": "476b644968c3141cbaff304f7c05f781b6f711951ff6a71b626d0465d264fd4c",
+      "packaged_sha256": "476b644968c3141cbaff304f7c05f781b6f711951ff6a71b626d0465d264fd4c",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/models/FSNet.py",
+      "origin": "226:/home/zhanglei/Proceed/models/FSNet.py",
+      "source_sha256": "eb5ad75800a1ef914f70cbd072f5ddac1a92252b51bdaafab6cb32fcbc4c09c8",
+      "packaged_sha256": "5bd9abcb19e54608bba1e9204ce5aa730667773c6def8a22e28521842f837f63",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "vendor/onlinetsf/models/iTransformer.py",
+      "origin": "226:/home/zhanglei/Proceed/models/iTransformer.py",
+      "source_sha256": "9580b20c160c19097421d3264d6917be935f45dbdb806e1da52ffb649bfb6f84",
+      "packaged_sha256": "9580b20c160c19097421d3264d6917be935f45dbdb806e1da52ffb649bfb6f84",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/models/normalization.py",
+      "origin": "226:/home/zhanglei/Proceed/models/normalization.py",
+      "source_sha256": "c79ca6f06fea7b4d6cfbcdeb44700b32b480d67118dac4949d7eb055c7edc1c5",
+      "packaged_sha256": "995d807ddee0706dd1ca170dcfe3af31d08f76ef2516e0da8ddeacb4ae9bc663",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "vendor/onlinetsf/models/OneNet.py",
+      "origin": "226:/home/zhanglei/Proceed/models/OneNet.py",
+      "source_sha256": "d8eea4541ac4b9eabae23d87dd5ae0d029aa04bc82de8fa1677bf57f32042a0c",
+      "packaged_sha256": "d8eea4541ac4b9eabae23d87dd5ae0d029aa04bc82de8fa1677bf57f32042a0c",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/models/PatchTST.py",
+      "origin": "226:/home/zhanglei/Proceed/models/PatchTST.py",
+      "source_sha256": "c3988655807c7a5b119e5dc68fa4a80718f9bf0c89896d1d89d19432f923be0f",
+      "packaged_sha256": "c3988655807c7a5b119e5dc68fa4a80718f9bf0c89896d1d89d19432f923be0f",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/models/TCN.py",
+      "origin": "226:/home/zhanglei/Proceed/models/TCN.py",
+      "source_sha256": "584ba08a36d216677f5274d2cca7392399aab188496d1e83dfd69a575646c350",
+      "packaged_sha256": "8f7fd0818b1e1cb5150e7671d0916037692ae886693f1ff5a8296a2aceeed71a",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "vendor/onlinetsf/util/buffer.py",
+      "origin": "226:/home/zhanglei/Proceed/util/buffer.py",
+      "source_sha256": "c3673a54354e0e5f1c076031d908923761fae6cd8f68915b9e0dcacca2aa79e0",
+      "packaged_sha256": "c3673a54354e0e5f1c076031d908923761fae6cd8f68915b9e0dcacca2aa79e0",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/util/dlinear_support.py",
+      "origin": "226:/home/zhanglei/Proceed/util/dlinear_support.py",
+      "source_sha256": "2bd4168110e3d0dab1d2f965fda65dcaf3f5e2d66bd7007c01c89ad017d9fa62",
+      "packaged_sha256": "2bd4168110e3d0dab1d2f965fda65dcaf3f5e2d66bd7007c01c89ad017d9fa62",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/util/masking.py",
+      "origin": "226:/home/zhanglei/Proceed/util/masking.py",
+      "source_sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+      "packaged_sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/util/metrics.py",
+      "origin": "226:/home/zhanglei/Proceed/util/metrics.py",
+      "source_sha256": "cba522375c8ed50cfc840b565ff2b74c5b7312e5668e886608ddcfcd68112a9d",
+      "packaged_sha256": "5899995e27b39318fdc524c39a8365d656610396008cc280640b328cfe646e89",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "vendor/onlinetsf/util/timefeatures.py",
+      "origin": "226:/home/zhanglei/Proceed/util/timefeatures.py",
+      "source_sha256": "6c6cfdad61d03e9531d87e11a77981a1ad5fc217e364e4efe70b8dff193e233e",
+      "packaged_sha256": "6c6cfdad61d03e9531d87e11a77981a1ad5fc217e364e4efe70b8dff193e233e",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "vendor/onlinetsf/util/tools.py",
+      "origin": "226:/home/zhanglei/Proceed/util/tools.py",
+      "source_sha256": "0e3a5f3b53ffc7f6db05c2372c809dc6360ab340e6cb4fa29c7927f6da7e065e",
+      "packaged_sha256": "0e3a5f3b53ffc7f6db05c2372c809dc6360ab340e6cb4fa29c7927f6da7e065e",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/__init__.py",
+      "origin": "42:/PMSE/PMSE/pmse/__init__.py",
+      "source_sha256": "646e6e94b47e6dda965f142c52fbe3d8b8a241027a866596036d538a59f5e2d5",
+      "packaged_sha256": "646e6e94b47e6dda965f142c52fbe3d8b8a241027a866596036d538a59f5e2d5",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/__init__.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/__init__.py",
+      "source_sha256": "eacf11b9bb7ee90126e50d682fcb66b2b4e8bc00eb9993dba28e0f3ff5bf534b",
+      "packaged_sha256": "e3ceab2ced08288a66bff4d73b7940e7ea73517f48b349fdc217f2ccab714a46",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "src/pmse/backbones/attention.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/attention.py",
+      "source_sha256": "3b62c3a94eda26001e4c2e7b5441759b48a02fc54ed7774728782ee98e2d7005",
+      "packaged_sha256": "3b62c3a94eda26001e4c2e7b5441759b48a02fc54ed7774728782ee98e2d7005",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/dilated_conv.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/dilated_conv.py",
+      "source_sha256": "9c98e7313e78748670083c400a4ee4d1357a88f1a0457c7f44e780ac4165cdbb",
+      "packaged_sha256": "9c98e7313e78748670083c400a4ee4d1357a88f1a0457c7f44e780ac4165cdbb",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/dlinear.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/dlinear.py",
+      "source_sha256": "476b644968c3141cbaff304f7c05f781b6f711951ff6a71b626d0465d264fd4c",
+      "packaged_sha256": "476b644968c3141cbaff304f7c05f781b6f711951ff6a71b626d0465d264fd4c",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/embedding_inverted.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/embedding_inverted.py",
+      "source_sha256": "9b9fc43cd7a4a2c3954e6b34d754b9091da73a127325cbb83497ec483affa9a2",
+      "packaged_sha256": "9b9fc43cd7a4a2c3954e6b34d754b9091da73a127325cbb83497ec483affa9a2",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/itransformer.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/itransformer.py",
+      "source_sha256": "144bb93b008e7cbf21d648090652f0569cc5f661325f51fc2f7897d143c6bbd1",
+      "packaged_sha256": "144bb93b008e7cbf21d648090652f0569cc5f661325f51fc2f7897d143c6bbd1",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/masking.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/masking.py",
+      "source_sha256": "e52d79781939ecc6960d2ac732378e4116521150a9d7e8a3647343ced78babb3",
+      "packaged_sha256": "e52d79781939ecc6960d2ac732378e4116521150a9d7e8a3647343ced78babb3",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/patchtst.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/patchtst.py",
+      "source_sha256": "8bf2c835a249620243c5c896094c4061e5d12251e8cc0a14b0a5ed6d0142e4b0",
+      "packaged_sha256": "8bf2c835a249620243c5c896094c4061e5d12251e8cc0a14b0a5ed6d0142e4b0",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/patchtst_backbone.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/patchtst_backbone.py",
+      "source_sha256": "af8c94e75850e754152a5723e552ff705c8fd8ec185d6924d7cef50dfe15f6eb",
+      "packaged_sha256": "af8c94e75850e754152a5723e552ff705c8fd8ec185d6924d7cef50dfe15f6eb",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/patchtst_layers.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/patchtst_layers.py",
+      "source_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6",
+      "packaged_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/registry.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/registry.py",
+      "source_sha256": "520824aced27957d459c3f3c8799fedc0692c2958f96369f580544be5e79d48b",
+      "packaged_sha256": "520824aced27957d459c3f3c8799fedc0692c2958f96369f580544be5e79d48b",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/revin.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/revin.py",
+      "source_sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+      "packaged_sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/tcn.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/tcn.py",
+      "source_sha256": "a3b053e2a56fdf8b823ebcef5787ca61d4bd701480f86b519823c826068020c0",
+      "packaged_sha256": "a3b053e2a56fdf8b823ebcef5787ca61d4bd701480f86b519823c826068020c0",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/transformer_layers.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/transformer_layers.py",
+      "source_sha256": "456827651238397f7e16fd7007d9781aa13a06ee147e95d17c86f0c69a3ba4ee",
+      "packaged_sha256": "456827651238397f7e16fd7007d9781aa13a06ee147e95d17c86f0c69a3ba4ee",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/backbones/ts2vec_encoder.py",
+      "origin": "42:/PMSE/PMSE/pmse/backbones/ts2vec_encoder.py",
+      "source_sha256": "3e74997d09921fb42a6eb367755ba18729d1431bebc7131bc494845edaac4d17",
+      "packaged_sha256": "3e74997d09921fb42a6eb367755ba18729d1431bebc7131bc494845edaac4d17",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/calibration.py",
+      "origin": "42:/PMSE/PMSE/pmse/calibration.py",
+      "source_sha256": "4a9f9dd8c1d30e24e08a176349799e5b7a617100025fe6a46dc90701e1277e22",
+      "packaged_sha256": "d4921c91b97855d1a52e245083c4227da4ce47bc421ec4959ca6e2dad792fad3",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "src/pmse/data.py",
+      "origin": "42:/PMSE/PMSE/pmse/data.py",
+      "source_sha256": "37bc34edbc76eb069be43d8ad3b581c4a2193b0b1c1b12b52f87e1d23a515e35",
+      "packaged_sha256": "37bc34edbc76eb069be43d8ad3b581c4a2193b0b1c1b12b52f87e1d23a515e35",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/engine.py",
+      "origin": "42:/PMSE/PMSE/pmse/engine.py",
+      "source_sha256": "c8da6b92e0ccc0bee1b3ac8d2900a20705e3837cc680bcceef71ca87b8276d19",
+      "packaged_sha256": "00f6a80b92648696b9ccb6fca6c4baa017d7c384165ecbda2e5542f692f4cdf9",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "src/pmse/model.py",
+      "origin": "42:/PMSE/PMSE/pmse/model.py",
+      "source_sha256": "2912bbcfac4af123b7b69ea8d4a69d5cdd972deea12d368b463d496ada8abb19",
+      "packaged_sha256": "ab54764eea3cf3a14e519da71600b575e8e6cbc318008f908d6bb36ca042be87",
+      "modified_from_snapshot": true
+    },
+    {
+      "path": "src/pmse/statistics.py",
+      "origin": "42:/PMSE/PMSE/pmse/statistics.py",
+      "source_sha256": "e75894bfade5f5cc6ba494ef184b4e1d1b2392c132555c7ec72ba53808cc0b02",
+      "packaged_sha256": "e75894bfade5f5cc6ba494ef184b4e1d1b2392c132555c7ec72ba53808cc0b02",
+      "modified_from_snapshot": false
+    },
+    {
+      "path": "src/pmse/utils.py",
+      "origin": "42:/PMSE/PMSE/pmse/utils.py",
+      "source_sha256": "6ef9e0c4738920063ad1d7dd7df89ebf50f4f073ae395aab0492c49d0419a350",
+      "packaged_sha256": "15c4a9a7baf4b71613b3e6d2bcf2d6867ae1eeb1789bc1766be7ef933ed379b0",
+      "modified_from_snapshot": true
+    }
+  ],
+  "pmse_origin": "42:/PMSE/PMSE/pmse",
+  "note": "Integration modifications are documented in README.md; this is a source-origin manifest, not a claim of byte-identical engines."
+}

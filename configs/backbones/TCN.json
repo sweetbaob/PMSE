@@ -1,0 +1,9 @@
+{
+  "name": "TCN",
+  "model": {
+    "tcn_output_dims": 320,
+    "tcn_hidden_dims": 64,
+    "tcn_depth": 10
+  },
+  "notes": "Native architecture dimensions inherited from the audited implementation; input length is resolved explicitly by dataset lengths. PMSE and baselines use identical observed calendar covariates."
+}

@@ -1,0 +1,3655 @@
+{
+  "PatchTST": {
+    "ETTh2": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {
+        "dataset": "ETTh2",
+        "border_type": "online",
+        "model": "PatchTST",
+        "seq_len": "336",
+        "pred_len": "24",
+        "itr": "3",
+        "only_test": true,
+        "pin_gpu": "True",
+        "reduce_bs": "False",
+        "save_opt": true,
+        "batch_size": "128",
+        "train_epochs": "100",
+        "pct": "0.4",
+        "patience": "10",
+        "learning_rate": "0.0001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/PatchTST/Proceed/ETTh2.sh",
+          "by_horizon": {
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 0.0003,
+              "concept_dim": 200,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.0003,
+              "online_lr": 1e-05,
+              "concept_dim": 200,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 0.0003,
+              "concept_dim": 200,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "val_online_lr": true,
+              "transferred_from_horizon": 48
+            }
+          },
+          "script_candidates": {
+            "48": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 0.0003,
+                "concept_dim": 200,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 1e-05,
+                "concept_dim": 200,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/PatchTST/Online/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-05
+            },
+            "48": {
+              "online_lr": 3e-05
+            },
+            "96": {
+              "online_lr": 3e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-05
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-05
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/PatchTST/SOLID++/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-05
+            },
+            "48": {
+              "online_lr": 1e-05
+            },
+            "96": {
+              "online_lr": 1e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/PatchTST/OneNet/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.0001,
+              "online_lr": 3e-06,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.0001,
+              "online_lr": 3e-06,
+              "val_online_lr": true,
+              "transferred_from_horizon": 24
+            },
+            "96": {
+              "offline_lr": 0.0001,
+              "online_lr": 3e-06,
+              "val_online_lr": true,
+              "transferred_from_horizon": 24
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.0001,
+                "online_lr": 3e-06,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ETTm1": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {
+        "dataset": "ETTm1",
+        "border_type": "online",
+        "model": "PatchTST",
+        "seq_len": "512",
+        "pred_len": "24",
+        "itr": "3",
+        "only_test": true,
+        "pin_gpu": "True",
+        "reduce_bs": "False",
+        "save_opt": true,
+        "batch_size": "128",
+        "train_epochs": "100",
+        "pct": "0.4",
+        "patience": "10",
+        "learning_rate": "0.0001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/PatchTST/Proceed/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 250,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "wo_clip": true,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 250,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "wo_clip": true,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "wo_clip": true,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 250,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "wo_clip": true,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 250,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "wo_clip": true,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "wo_clip": true,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/PatchTST/Online/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-07
+            },
+            "48": {
+              "online_lr": 3e-07
+            },
+            "96": {
+              "online_lr": 3e-07
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-07
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-07
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-07
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/PatchTST/SOLID++/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-07
+            },
+            "48": {
+              "online_lr": 3e-07
+            },
+            "96": {
+              "online_lr": 3e-07
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-07
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-07
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-07
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/PatchTST/OneNet/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.0003,
+              "online_lr": 1e-07,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.0003,
+              "online_lr": 1e-07,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.0003,
+              "online_lr": 1e-07,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 1e-07,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 1e-07,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 1e-07,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Weather": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {
+        "dataset": "Weather",
+        "border_type": "online",
+        "model": "PatchTST",
+        "seq_len": "512",
+        "pred_len": "24",
+        "itr": "3",
+        "only_test": true,
+        "pin_gpu": "True",
+        "reduce_bs": "False",
+        "save_opt": true,
+        "batch_size": "128",
+        "train_epochs": "100",
+        "pct": "0.4",
+        "patience": "20",
+        "learning_rate": "0.0001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/PatchTST/Proceed/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.0001,
+              "online_lr": 3e-07,
+              "concept_dim": 150,
+              "bottleneck_dim": 32,
+              "batch_size": 8,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.0001,
+              "online_lr": 3e-07,
+              "concept_dim": 150,
+              "bottleneck_dim": 48,
+              "batch_size": 8,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 3e-06,
+              "online_lr": 1e-07,
+              "concept_dim": 150,
+              "bottleneck_dim": 64,
+              "batch_size": 8,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.0001,
+                "online_lr": 3e-07,
+                "concept_dim": 150,
+                "bottleneck_dim": 32,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.0001,
+                "online_lr": 3e-07,
+                "concept_dim": 150,
+                "bottleneck_dim": 48,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 3e-06,
+                "online_lr": 1e-07,
+                "concept_dim": 150,
+                "bottleneck_dim": 64,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/PatchTST/Online/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-07
+            },
+            "48": {
+              "online_lr": 1e-07
+            },
+            "96": {
+              "online_lr": 1e-07
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-07
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/PatchTST/SOLID++/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-07
+            },
+            "48": {
+              "online_lr": 1e-07
+            },
+            "96": {
+              "online_lr": 1e-07
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-07
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/PatchTST/OneNet/Weather.sh",
+          "by_horizon": {
+            "96": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-07,
+              "val_online_lr": true
+            },
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-07,
+              "val_online_lr": true,
+              "transferred_from_horizon": 96
+            },
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-07,
+              "val_online_lr": true,
+              "transferred_from_horizon": 96
+            }
+          },
+          "script_candidates": {
+            "96": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-07,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ECL": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {
+        "nproc_per_node=2": "run.py",
+        "dataset": "ECL",
+        "border_type": "online",
+        "model": "PatchTST",
+        "seq_len": "512",
+        "pred_len": "24",
+        "itr": "3",
+        "skip": "logs/online/PatchTST_ECL_24_lr0.0001.log",
+        "pin_gpu": "True",
+        "reduce_bs": "False",
+        "save_opt": true,
+        "batch_size": "32",
+        "train_epochs": "100",
+        "pct": "0.2",
+        "patience": "10",
+        "learning_rate": "0.0001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/PatchTST/Proceed/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-06,
+              "concept_dim": 100,
+              "bottleneck_dim": 24,
+              "batch_size": 8,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-06,
+              "concept_dim": 100,
+              "bottleneck_dim": 24,
+              "batch_size": 8,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 3e-07,
+              "concept_dim": 100,
+              "bottleneck_dim": 16,
+              "batch_size": 8,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-06,
+                "concept_dim": 100,
+                "bottleneck_dim": 24,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-06,
+                "concept_dim": 100,
+                "bottleneck_dim": 24,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 3e-07,
+                "concept_dim": 100,
+                "bottleneck_dim": 16,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/PatchTST/Online/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-07
+            },
+            "48": {
+              "online_lr": 1e-07
+            },
+            "96": {
+              "online_lr": 1e-07
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-07
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/PatchTST/SOLID++/ECL.sh",
+          "by_horizon": {
+            "48": {
+              "online_lr": 3e-08
+            },
+            "24": {
+              "online_lr": 3e-08,
+              "transferred_from_horizon": 48
+            },
+            "96": {
+              "online_lr": 3e-08,
+              "transferred_from_horizon": 48
+            }
+          },
+          "script_candidates": {
+            "48": [
+              {
+                "online_lr": 3e-08
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/PatchTST/OneNet/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.0001,
+              "online_lr": 3e-08,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.0001,
+              "online_lr": 3e-08,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.0001,
+              "online_lr": 3e-08,
+              "batch_size": 16,
+              "val_online_lr": true,
+              "transferred_from_horizon": 24
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.0001,
+                "online_lr": 3e-08,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.0001,
+                "online_lr": 3e-08,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Traffic": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {
+        "nproc_per_node=3": "run.py",
+        "dataset": "Traffic",
+        "border_type": "online",
+        "model": "PatchTST",
+        "seq_len": "512",
+        "pred_len": "24",
+        "itr": "3",
+        "pin_gpu": "True",
+        "reduce_bs": "False",
+        "save_opt": true,
+        "batch_size": "24",
+        "train_epochs": "100",
+        "pct": "0.2",
+        "patience": "10",
+        "learning_rate": "0.0001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/PatchTST/Proceed/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 48,
+              "batch_size": 4,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 200,
+              "bottleneck_dim": 48,
+              "batch_size": 4,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.0003,
+              "online_lr": 1e-06,
+              "concept_dim": 200,
+              "bottleneck_dim": 48,
+              "batch_size": 4,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 48,
+                "batch_size": 4,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 200,
+                "bottleneck_dim": 48,
+                "batch_size": 4,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 1e-06,
+                "concept_dim": 200,
+                "bottleneck_dim": 48,
+                "batch_size": 4,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/PatchTST/Online/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-07
+            },
+            "48": {
+              "online_lr": 3e-07
+            },
+            "96": {
+              "online_lr": 3e-07
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-07
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-07
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-07
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/PatchTST/SOLID++/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-07
+            },
+            "48": {
+              "online_lr": 1e-07
+            },
+            "96": {
+              "online_lr": 1e-07
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-07
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/PatchTST/OneNet/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.0003,
+              "online_lr": 3e-07,
+              "batch_size": 8,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.0003,
+              "online_lr": 3e-07,
+              "batch_size": 8,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.0003,
+              "online_lr": 3e-07,
+              "batch_size": 8,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 3e-07,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 3e-07,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 3e-07,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ExchangeRate": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Solar": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "PEMS03": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    }
+  },
+  "iTransformer": {
+    "ETTh2": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {
+        "dataset": "ETTh2",
+        "border_type": "online",
+        "model": "iTransformer",
+        "seq_len": "336",
+        "pred_len": "24",
+        "itr": "3",
+        "only_test": true,
+        "save_opt": true,
+        "batch_size": "32",
+        "learning_rate": "0.0001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/iTransformer/Proact_XY/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05,
+              "concept_dim": 50,
+              "bottleneck_dim": 48,
+              "batch_size": 32,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05,
+              "concept_dim": 50,
+              "bottleneck_dim": 48,
+              "batch_size": 32,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05,
+              "concept_dim": 50,
+              "bottleneck_dim": 48,
+              "batch_size": 32,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05,
+                "concept_dim": 50,
+                "bottleneck_dim": 48,
+                "batch_size": 32,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05,
+                "concept_dim": 50,
+                "bottleneck_dim": 48,
+                "batch_size": 32,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05,
+                "concept_dim": 50,
+                "bottleneck_dim": 48,
+                "batch_size": 32,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/iTransformer/Online/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-05
+            },
+            "48": {
+              "online_lr": 3e-05
+            },
+            "96": {
+              "online_lr": 3e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-05
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-05
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/iTransformer/SOLID++/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-06
+            },
+            "48": {
+              "online_lr": 3e-06
+            },
+            "96": {
+              "online_lr": 3e-06
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-06
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/iTransformer/OneNet/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.0001,
+              "online_lr": 1e-07,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.0001,
+              "online_lr": 1e-07,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.0001,
+              "online_lr": 1e-07,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.0001,
+                "online_lr": 1e-07,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.0001,
+                "online_lr": 1e-07,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.0001,
+                "online_lr": 1e-07,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ETTm1": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {
+        "dataset": "ETTm1",
+        "border_type": "online",
+        "model": "iTransformer",
+        "seq_len": "512",
+        "pred_len": "24",
+        "itr": "3",
+        "only_test": true,
+        "save_opt": true,
+        "batch_size": "32",
+        "learning_rate": "0.0001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/iTransformer/Proact_XY/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 32,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 32,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 32,
+              "batch_size": 16,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 32,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 32,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 32,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/iTransformer/Online/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-06
+            },
+            "48": {
+              "online_lr": 3e-06
+            },
+            "96": {
+              "online_lr": 3e-06
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-06
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/iTransformer/SOLID++/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-06
+            },
+            "48": {
+              "online_lr": 3e-06
+            },
+            "96": {
+              "online_lr": 3e-06
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-06
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/iTransformer/OneNet/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 3e-05,
+              "online_lr": 3e-06,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 3e-05,
+              "online_lr": 3e-07,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 1e-05,
+              "online_lr": 3e-06,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 3e-05,
+                "online_lr": 3e-06,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 3e-05,
+                "online_lr": 3e-07,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 1e-05,
+                "online_lr": 3e-06,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Weather": {
+      "pretrain_lr": 1e-05,
+      "pretraining_script": {
+        "dataset": "Weather",
+        "border_type": "online",
+        "model": "iTransformer",
+        "seq_len": "512",
+        "pred_len": "24",
+        "itr": "3",
+        "only_test": true,
+        "save_opt": true,
+        "batch_size": "32",
+        "learning_rate": "0.00001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/iTransformer/Proact_XY/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 3e-06,
+              "concept_dim": 100,
+              "bottleneck_dim": 24,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 3e-06,
+              "concept_dim": 100,
+              "bottleneck_dim": 24,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 3e-06,
+              "concept_dim": 100,
+              "bottleneck_dim": 24,
+              "batch_size": 16,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 3e-06,
+                "concept_dim": 100,
+                "bottleneck_dim": 24,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 3e-06,
+                "concept_dim": 100,
+                "bottleneck_dim": 24,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 3e-06,
+                "concept_dim": 100,
+                "bottleneck_dim": 24,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/iTransformer/Online/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-07
+            },
+            "48": {
+              "online_lr": 3e-07
+            },
+            "96": {
+              "online_lr": 3e-07
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-07
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-07
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-07
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/iTransformer/SOLID++/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-07
+            },
+            "48": {
+              "online_lr": 1e-07
+            },
+            "96": {
+              "online_lr": 1e-07
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-07
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/iTransformer/OneNet/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.0003,
+              "online_lr": 3e-07,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.0001,
+              "online_lr": 3e-07,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 3e-05,
+              "online_lr": 3e-07,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 3e-07,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.0001,
+                "online_lr": 3e-07,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 3e-05,
+                "online_lr": 3e-07,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ECL": {
+      "pretrain_lr": 0.0005,
+      "pretraining_script": {
+        "dataset": "ECL",
+        "border_type": "online",
+        "model": "iTransformer",
+        "seq_len": "512",
+        "pred_len": "24",
+        "itr": "3",
+        "only_test": true,
+        "save_opt": true,
+        "batch_size": "16",
+        "learning_rate": "0.0005"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/iTransformer/Proact_XY/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 3e-06,
+              "concept_dim": 200,
+              "bottleneck_dim": 32,
+              "batch_size": 8,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-06,
+              "concept_dim": 200,
+              "bottleneck_dim": 32,
+              "batch_size": 8,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-06,
+              "concept_dim": 200,
+              "bottleneck_dim": 32,
+              "batch_size": 8,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 3e-06,
+                "concept_dim": 200,
+                "bottleneck_dim": 32,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-06,
+                "concept_dim": 200,
+                "bottleneck_dim": 32,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-06,
+                "concept_dim": 200,
+                "bottleneck_dim": 32,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/iTransformer/Online/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-07
+            },
+            "48": {
+              "online_lr": 1e-07
+            },
+            "96": {
+              "online_lr": 1e-07
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-07
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-07
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/iTransformer/SOLID++/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-08
+            },
+            "48": {
+              "online_lr": 1e-08
+            },
+            "96": {
+              "online_lr": 1e-08
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-08
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-08
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-08
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/iTransformer/OneNet/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.0003,
+              "online_lr": 1e-07,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.0003,
+              "online_lr": 1e-07,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.0003,
+              "online_lr": 1e-07,
+              "batch_size": 16,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 1e-07,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 1e-07,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.0003,
+                "online_lr": 1e-07,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Traffic": {
+      "pretrain_lr": 0.001,
+      "pretraining_script": {
+        "dataset": "Traffic",
+        "border_type": "online",
+        "model": "iTransformer",
+        "seq_len": "512",
+        "pred_len": "24",
+        "itr": "3",
+        "only_test": true,
+        "save_opt": true,
+        "batch_size": "16",
+        "learning_rate": "0.001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/iTransformer/Proact_XY/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 32,
+              "batch_size": 8,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 3e-06,
+              "concept_dim": 150,
+              "bottleneck_dim": 32,
+              "batch_size": 8,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 3e-06,
+              "concept_dim": 150,
+              "bottleneck_dim": 32,
+              "batch_size": 8,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 32,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 3e-06,
+                "concept_dim": 150,
+                "bottleneck_dim": 32,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 3e-06,
+                "concept_dim": 150,
+                "bottleneck_dim": 32,
+                "batch_size": 8,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/iTransformer/Online/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-06
+            },
+            "48": {
+              "online_lr": 1e-06
+            },
+            "96": {
+              "online_lr": 1e-06
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-06
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-06
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-06
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/iTransformer/SOLID++/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-06
+            },
+            "48": {
+              "online_lr": 3e-06
+            },
+            "96": {
+              "online_lr": 3e-06
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-06
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/iTransformer/OneNet/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-06,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-06,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-06,
+              "batch_size": 16,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-06,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-06,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-06,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ExchangeRate": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Solar": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "PEMS03": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    }
+  },
+  "TCN": {
+    "ETTh2": {
+      "pretrain_lr": 0.001,
+      "pretraining_script": {
+        "dataset": "ETTh2",
+        "border_type": "online",
+        "model": "TCN",
+        "normalization": "RevIN",
+        "seq_len": "60",
+        "pred_len": "24",
+        "itr": "3",
+        "skip": "logs/online/TCN_RevIN_ETTh2_24_lr0.001.log",
+        "only_test": true,
+        "pin_gpu": "True",
+        "reduce_bs": "False",
+        "save_opt": true,
+        "learning_rate": "0.001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/TCN_RevIN/Proceed/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05,
+              "concept_dim": 50,
+              "bottleneck_dim": 32,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-06,
+              "concept_dim": 50,
+              "bottleneck_dim": 32,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-06,
+              "concept_dim": 100,
+              "bottleneck_dim": 64,
+              "batch_size": 16,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05,
+                "concept_dim": 50,
+                "bottleneck_dim": 32,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-06,
+                "concept_dim": 50,
+                "bottleneck_dim": 32,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-06,
+                "concept_dim": 100,
+                "bottleneck_dim": 64,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/TCN_RevIN/Online/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-05
+            },
+            "48": {
+              "online_lr": 1e-05
+            },
+            "96": {
+              "online_lr": 1e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/TCN_RevIN/SOLID++/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 0.0001
+            },
+            "96": {
+              "online_lr": 0.0001
+            },
+            "48": {
+              "online_lr": 0.0001,
+              "transferred_from_horizon": 24
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 0.0001
+              },
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 0.0001
+              },
+              {
+                "online_lr": 1e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/TCN_RevIN/OneNet/ETTh2.sh",
+          "by_horizon": {
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 0.0003
+            },
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 0.0003,
+              "transferred_from_horizon": 48
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 0.0003,
+              "transferred_from_horizon": 48
+            }
+          },
+          "script_candidates": {
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 0.0003
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "official:scripts/online/TCN_RevIN/FSNet/ETTh2.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05
+            },
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05
+            },
+            "96": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ETTm1": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {
+        "dataset": "ETTm1",
+        "border_type": "online",
+        "model": "TCN",
+        "normalization": "RevIN",
+        "seq_len": "60",
+        "pred_len": "24",
+        "itr": "3",
+        "skip": "logs/online/TCN_RevIN_ETTm1_24_lr0.0001.log",
+        "only_test": true,
+        "pin_gpu": "True",
+        "reduce_bs": "False",
+        "save_opt": true,
+        "learning_rate": "0.0001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/TCN_RevIN/Proceed/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/TCN_RevIN/Online/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-06
+            },
+            "48": {
+              "online_lr": 1e-06
+            },
+            "96": {
+              "online_lr": 1e-06
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-06
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-06
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-06
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/TCN_RevIN/SOLID++/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-05
+            },
+            "48": {
+              "online_lr": 1e-05
+            },
+            "96": {
+              "online_lr": 1e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/TCN_RevIN/OneNet/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 0.0001
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 0.0001
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 0.0001
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 0.0001
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 0.0001
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 0.0001
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "official:scripts/online/TCN_RevIN/FSNet/ETTm1.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Weather": {
+      "pretrain_lr": 0.001,
+      "pretraining_script": {
+        "dataset": "Weather",
+        "border_type": "online",
+        "model": "TCN",
+        "normalization": "RevIN",
+        "seq_len": "60",
+        "pred_len": "48",
+        "itr": "3",
+        "skip": "logs/online/TCN_RevIN_Weather_48_lr0.001.log",
+        "pin_gpu": "True",
+        "reduce_bs": "False",
+        "save_opt": true,
+        "learning_rate": "0.001"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/TCN_RevIN/Proceed/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 24,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 24,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.003,
+              "online_lr": 1e-05,
+              "concept_dim": 150,
+              "bottleneck_dim": 24,
+              "batch_size": 16,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 24,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 24,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 1e-05,
+                "concept_dim": 150,
+                "bottleneck_dim": 24,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/TCN_RevIN/Online/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-06
+            },
+            "48": {
+              "online_lr": 3e-06
+            },
+            "96": {
+              "online_lr": 3e-06
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-06
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/TCN_RevIN/SOLID++/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-06
+            },
+            "48": {
+              "online_lr": 3e-06
+            },
+            "96": {
+              "online_lr": 3e-06
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-06
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-06
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/TCN_RevIN/OneNet/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05
+            },
+            "48": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05
+            },
+            "96": {
+              "offline_lr": 0.001,
+              "online_lr": 1e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.001,
+                "online_lr": 1e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "official:scripts/online/TCN_RevIN/FSNet/Weather.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-06
+            },
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-06
+            },
+            "96": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-06
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-06
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-06
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-06
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ECL": {
+      "pretrain_lr": 0.003,
+      "pretraining_script": {
+        "dataset": "ECL",
+        "border_type": "online",
+        "model": "TCN",
+        "normalization": "RevIN",
+        "seq_len": "60",
+        "pred_len": "24",
+        "itr": "3",
+        "skip": "logs/online/TCN_RevIN_ECL_24_lr0.003.log",
+        "only_test": true,
+        "pin_gpu": "True",
+        "reduce_bs": "False",
+        "save_opt": true,
+        "learning_rate": "0.003"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/TCN_RevIN/Proceed/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05,
+              "concept_dim": 100,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05,
+              "concept_dim": 100,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05,
+              "concept_dim": 100,
+              "bottleneck_dim": 48,
+              "batch_size": 16,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05,
+                "concept_dim": 100,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05,
+                "concept_dim": 100,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05,
+                "concept_dim": 100,
+                "bottleneck_dim": 48,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/TCN_RevIN/Online/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-05
+            },
+            "48": {
+              "online_lr": 1e-05
+            },
+            "96": {
+              "online_lr": 1e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/TCN_RevIN/SOLID++/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-05
+            },
+            "48": {
+              "online_lr": 3e-05
+            },
+            "96": {
+              "online_lr": 3e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-05
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-05
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/TCN_RevIN/OneNet/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.01,
+              "online_lr": 0.0001
+            },
+            "48": {
+              "offline_lr": 0.01,
+              "online_lr": 0.0001,
+              "transferred_from_horizon": 24
+            },
+            "96": {
+              "offline_lr": 0.01,
+              "online_lr": 0.0001,
+              "transferred_from_horizon": 24
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.01,
+                "online_lr": 0.0001
+              },
+              {
+                "offline_lr": 0.001,
+                "online_lr": 0.0001
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "official:scripts/online/TCN_RevIN/FSNet/ECL.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05
+            },
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05
+            },
+            "96": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Traffic": {
+      "pretrain_lr": 0.003,
+      "pretraining_script": {
+        "dataset": "Traffic",
+        "border_type": "online",
+        "model": "TCN",
+        "normalization": "RevIN",
+        "seq_len": "60",
+        "pred_len": "24",
+        "itr": "3",
+        "skip": "logs/online/TCN_RevIN_Traffic_24_lr0.003.log",
+        "only_test": true,
+        "pin_gpu": "True",
+        "reduce_bs": "False",
+        "save_opt": true,
+        "learning_rate": "0.003"
+      },
+      "methods": {
+        "Proceed": {
+          "source": "official:scripts/online/TCN_RevIN/Proceed/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.01,
+              "online_lr": 0.0001,
+              "concept_dim": 50,
+              "bottleneck_dim": 32,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "48": {
+              "offline_lr": 0.01,
+              "online_lr": 0.0001,
+              "concept_dim": 50,
+              "bottleneck_dim": 32,
+              "batch_size": 16,
+              "val_online_lr": true
+            },
+            "96": {
+              "offline_lr": 0.01,
+              "online_lr": 3e-05,
+              "concept_dim": 100,
+              "bottleneck_dim": 24,
+              "batch_size": 16,
+              "val_online_lr": true
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.01,
+                "online_lr": 0.0001,
+                "concept_dim": 50,
+                "bottleneck_dim": 32,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.01,
+                "online_lr": 0.0001,
+                "concept_dim": 50,
+                "bottleneck_dim": 32,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.01,
+                "online_lr": 3e-05,
+                "concept_dim": 100,
+                "bottleneck_dim": 24,
+                "batch_size": 16,
+                "val_online_lr": true
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "official:scripts/online/TCN_RevIN/Online/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 1e-05
+            },
+            "48": {
+              "online_lr": 1e-05
+            },
+            "96": {
+              "online_lr": 1e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 1e-05
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 1e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "official:scripts/online/TCN_RevIN/SOLID++/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "online_lr": 3e-05
+            },
+            "48": {
+              "online_lr": 3e-05
+            },
+            "96": {
+              "online_lr": 3e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "online_lr": 3e-05
+              }
+            ],
+            "48": [
+              {
+                "online_lr": 3e-05
+              }
+            ],
+            "96": [
+              {
+                "online_lr": 3e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "official:scripts/online/TCN_RevIN/OneNet/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05
+            },
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05
+            },
+            "96": {
+              "offline_lr": 0.003,
+              "online_lr": 3e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 3e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "official:scripts/online/TCN_RevIN/FSNet/Traffic.sh",
+          "by_horizon": {
+            "24": {
+              "offline_lr": 0.003,
+              "online_lr": 1e-05
+            },
+            "48": {
+              "offline_lr": 0.003,
+              "online_lr": 1e-05
+            },
+            "96": {
+              "offline_lr": 0.003,
+              "online_lr": 1e-05
+            }
+          },
+          "script_candidates": {
+            "24": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 1e-05
+              }
+            ],
+            "48": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 1e-05
+              }
+            ],
+            "96": [
+              {
+                "offline_lr": 0.003,
+                "online_lr": 1e-05
+              }
+            ]
+          },
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ExchangeRate": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Solar": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "PEMS03": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    }
+  },
+  "DLinear": {
+    "ETTh2": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ETTm1": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Weather": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ECL": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Traffic": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "ExchangeRate": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "Solar": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    },
+    "PEMS03": {
+      "pretrain_lr": 0.0001,
+      "pretraining_script": {},
+      "methods": {
+        "Proceed": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "Online": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "SOLID++": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "OneNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        },
+        "FSNet": {
+          "source": "declared_extension_default",
+          "by_horizon": {},
+          "script_candidates": {},
+          "selection": "first_script_entry_not_test_selected"
+        }
+      }
+    }
+  }
+}

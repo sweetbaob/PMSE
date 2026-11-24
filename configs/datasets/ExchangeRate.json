@@ -1,0 +1,88 @@
+{
+  "dataset": "ExchangeRate",
+  "status": "proceed_fixed_ett_with_declared_extensions_v1",
+  "data": {
+    "path": "exchange_rate.csv",
+    "format": "csv",
+    "date_column": "date",
+    "target_last": "OT",
+    "split": {
+      "type": "ratios",
+      "train": 0.2,
+      "test": 0.75
+    }
+  },
+  "model": {
+    "seq_len": 512,
+    "pred_len": 48,
+    "d_model": 128,
+    "n_heads": 16,
+    "e_layers": 3,
+    "d_ff": 256,
+    "dropout": 0.2,
+    "fc_dropout": 0.2,
+    "head_dropout": 0.0,
+    "patch_len": 16,
+    "stride": 8,
+    "padding_patch": "end",
+    "individual": false,
+    "revin": 1,
+    "affine": 0,
+    "subtract_last": 0,
+    "decomposition": 0,
+    "kernel_size": 25
+  },
+  "memory": {
+    "short_period": 5,
+    "long_period": 20,
+    "short_slots": 7,
+    "long_slots": 4,
+    "key_length": 16,
+    "width": 64
+  },
+  "training": {
+    "seed_list": [
+      2021,
+      2022,
+      2023
+    ],
+    "batch_size": 128,
+    "micro_batch": 128,
+    "max_epochs": 100,
+    "patience": 3,
+    "backbone_lr": 0.0001,
+    "new_lrs": [
+      0.0001,
+      0.001
+    ],
+    "schedule": "type3"
+  },
+  "online": {
+    "lr": 1e-06,
+    "warmup_validation": true
+  },
+  "calibration": {
+    "n0": 35,
+    "scale": "train_standardized",
+    "eps": 1e-08
+  },
+  "statistics": {
+    "block_length": 20,
+    "bootstrap_draws": 2000,
+    "seed": 0
+  },
+  "notes": "Provisional 5/20 observation periods; no verified daily/weekly seasonality.",
+  "calendar_policy": "observed_dates_else_zero",
+  "horizons": [
+    24,
+    48,
+    96
+  ],
+  "lengths": {
+    "PatchTST": 512,
+    "iTransformer": 512,
+    "TCN": 60,
+    "DLinear": 512
+  },
+  "frequency": "d"
+}

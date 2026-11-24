@@ -1,0 +1,37 @@
+[
+  {
+    "source": "https://raw.githubusercontent.com/yuqinie98/PatchTST/main/PatchTST_supervised/models/PatchTST.py",
+    "file": "pmse/backbones/patchtst.py",
+    "upstream_sha256": "49d8bb865e1226d6338842f4b33c4bc6992cefb048dc2a4a5a8c410ca708586b",
+    "packaged_sha256": "8bf2c835a249620243c5c896094c4061e5d12251e8cc0a14b0a5ed6d0142e4b0",
+    "modifications": "relative imports and UTF-8/LF normalization only"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/yuqinie98/PatchTST/main/PatchTST_supervised/layers/PatchTST_backbone.py",
+    "file": "pmse/backbones/patchtst_backbone.py",
+    "upstream_sha256": "df67173153787c2356bdfb6491159cd754332ef7382986efe879e1fbea8ebf26",
+    "packaged_sha256": "af8c94e75850e754152a5723e552ff705c8fd8ec185d6924d7cef50dfe15f6eb",
+    "modifications": "relative imports and UTF-8/LF normalization only"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/yuqinie98/PatchTST/main/PatchTST_supervised/layers/PatchTST_layers.py",
+    "file": "pmse/backbones/patchtst_layers.py",
+    "upstream_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6",
+    "packaged_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6",
+    "modifications": "relative imports and UTF-8/LF normalization only"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/yuqinie98/PatchTST/main/PatchTST_supervised/layers/RevIN.py",
+    "file": "pmse/backbones/revin.py",
+    "upstream_sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+    "packaged_sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+    "modifications": "relative imports and UTF-8/LF normalization only"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/yuqinie98/PatchTST/main/LICENSE",
+    "file": "third_party/PatchTST-LICENSE",
+    "upstream_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "packaged_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "modifications": "UTF-8/LF normalization"
+  }
+]

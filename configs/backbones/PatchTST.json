@@ -1,0 +1,5 @@
+{
+  "name": "PatchTST",
+  "model": {},
+  "notes": "Native architecture dimensions inherited from the audited implementation; input length is resolved explicitly by dataset lengths. PMSE and baselines use identical observed calendar covariates."
+}
